@@ -1,7 +1,7 @@
 extends Control
 
-@export var points:int = 0
-
 func show_points(points):
-	$Score.text = "Score: " + str(points) + "/5"
-	print(points)
+	$Score.text = "Pontuação: " + str(points) + "/10"
+
+func show_life(life):
+	$Life.text = "Vida: " + str(life) + "/3"

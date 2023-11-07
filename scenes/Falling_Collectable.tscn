@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://bg0qvu2jqipbt"]
 
-[ext_resource type="Script" path="res://scripts/FallingObject.gd" id="1_knqan"]
-[ext_resource type="Texture2D" uid="uid://c4oktn7ggg45c" path="res://assets/microsoft.png" id="2_iirux"]
+[ext_resource type="Script" path="res://scripts/FallingCollectable.gd" id="1_8eeh5"]
+[ext_resource type="Texture2D" uid="uid://c4oktn7ggg45c" path="res://assets/microsoft.png" id="2_p7lyy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eiuox"]
 size = Vector2(32, 31)
 
 [node name="FallingObject" type="Area2D"]
-script = ExtResource("1_knqan")
+script = ExtResource("1_8eeh5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.021, 0.02)
-texture = ExtResource("2_iirux")
+texture = ExtResource("2_p7lyy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_eiuox")

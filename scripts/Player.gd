@@ -13,4 +13,3 @@ func _physics_process(_delta):
 		
 	global_position.x = clamp(global_position.x, 0, screen.x)
 	move_and_slide()
-	

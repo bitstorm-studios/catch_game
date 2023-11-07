@@ -29,6 +29,7 @@ anchors_preset = 0
 offset_right = 232.0
 offset_bottom = 40.0
 script = ExtResource("4_43nuu")
+points = null
 
 [node name="Score" type="Label" parent="HUD"]
 layout_mode = 0
@@ -36,16 +37,7 @@ offset_left = 14.0
 offset_top = 1.0
 offset_right = 96.0
 offset_bottom = 38.0
-text = "Pontuação: 0/10"
-vertical_alignment = 1
-
-[node name="Life" type="Label" parent="HUD"]
-layout_mode = 0
-offset_left = 147.0
-offset_top = 1.0
-offset_right = 243.0
-offset_bottom = 38.0
-text = "Vida: 3/3"
+text = "Score: 0/5"
 vertical_alignment = 1
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
