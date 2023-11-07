@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bg0qvu2jqipbt"]
+
+[ext_resource type="Script" path="res://scripts/FallingObject.gd" id="1_knqan"]
+[ext_resource type="Texture2D" uid="uid://c4oktn7ggg45c" path="res://assets/microsoft.png" id="2_iirux"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eiuox"]
+size = Vector2(32, 31)
+
+[node name="FallingObject" type="Area2D"]
+script = ExtResource("1_knqan")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(467, -24)
+scale = Vector2(0.021, 0.02)
+texture = ExtResource("2_iirux")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(467, -24)
+shape = SubResource("RectangleShape2D_eiuox")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
