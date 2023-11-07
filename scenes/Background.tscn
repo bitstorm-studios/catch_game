@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://c62mn2mpm6gs8"]
+[gd_scene load_steps=6 format=3 uid="uid://c62mn2mpm6gs8"]
 
 [ext_resource type="Script" path="res://scripts/Background.gd" id="1_v1lpv"]
-[ext_resource type="PackedScene" uid="uid://bg0qvu2jqipbt" path="res://scenes/Falling_Object.tscn" id="2_p2e56"]
 [ext_resource type="PackedScene" uid="uid://c6oppqtldfxte" path="res://scenes/Player.tscn" id="3_t70lp"]
 [ext_resource type="Script" path="res://scripts/Points.gd" id="4_43nuu"]
 
@@ -20,9 +19,6 @@ scale = Vector2(20, 11.25)
 texture = SubResource("GradientTexture2D_3f34w")
 
 [node name="Timer" type="Timer" parent="."]
-
-[node name="FallingObject" parent="." instance=ExtResource("2_p2e56")]
-position = Vector2(651, -31)
 
 [node name="Player" parent="." instance=ExtResource("3_t70lp")]
 position = Vector2(623, 70)
@@ -44,4 +40,3 @@ text = "Score: 0/5"
 vertical_alignment = 1
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="add_points" from="FallingObject" to="HUD" method="_on_falling_object_add_points"]
