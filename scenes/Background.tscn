@@ -24,6 +24,7 @@ texture = SubResource("GradientTexture2D_3f34w")
 position = Vector2(623, 70)
 
 [node name="HUD" type="Control" parent="."]
+process_mode = 2
 layout_mode = 3
 anchors_preset = 0
 offset_right = 232.0

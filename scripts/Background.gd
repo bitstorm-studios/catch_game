@@ -3,6 +3,7 @@ extends Node2D
 var collectable_scene: PackedScene = preload("res://scenes/Falling_Collectable.tscn")
 var obstacle_scene: PackedScene = preload("res://scenes/Falling_Obstacle.tscn")
 var win_scene: PackedScene = preload("res://scenes/Win.tscn")
+var lose_scene:PackedScene = preload("res://scenes/Lose.tscn")
 var interval = 0.8
 var player_points = 0
 var player_life = 3
@@ -35,13 +36,14 @@ func on_collect():
 		get_tree().paused = true
 		var win_instance = win_scene.instantiate()
 		add_child(win_instance) 
-		$Win.pause = false
 		
 	$HUD.show_points(player_points)
 
 func on_decrease():
 	player_life -= 1
 	if (player_life == 0):
-		get_tree().quit()
+		get_tree().paused = true
+		var lose_instance = lose_scene.instantiate()
+		add_child(lose_instance) 
 		
 	$HUD.show_life(player_life)

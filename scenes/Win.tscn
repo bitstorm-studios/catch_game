@@ -1,9 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://boiw3we4sqx28"]
 
 [ext_resource type="FontFile" uid="uid://4miq0wwwk4mu" path="res://assets/font/kenney-blocks.ttf" id="1_c2hin"]
-[ext_resource type="Script" path="res://scripts/Button.gd" id="2_syrqw"]
+[ext_resource type="Script" path="res://scripts/Win.gd" id="2_48vxn"]
 
 [node name="Win" type="Control"]
+process_mode = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,6 +34,7 @@ theme_override_font_sizes/normal_font_size = 90
 text = "VOCÊ VENCEU"
 
 [node name="Button" type="Button" parent="."]
+process_mode = 2
 layout_mode = 0
 offset_left = 438.0
 offset_top = 455.0
@@ -41,6 +43,6 @@ offset_bottom = 591.0
 theme_override_fonts/font = ExtResource("1_c2hin")
 theme_override_font_sizes/font_size = 50
 text = "CONCLUIR"
-script = ExtResource("2_syrqw")
+script = ExtResource("2_48vxn")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
